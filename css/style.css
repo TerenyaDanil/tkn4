@@ -258,6 +258,10 @@ body.lock {
   padding: 3.5rem 0rem;
 }
 
+#fp-nav ul li:hover a span {
+  margin: 0rem 0rem 0rem 0rem;
+}
+
 #fp-nav ul li a {
   border: 0.2rem solid #fff;
   width: 3rem;
@@ -441,6 +445,13 @@ body.lock {
 .nav-header__item {
   color: #d5d5d5;
   margin: 0rem 4rem 0rem 0rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-header__item:hover {
+  color: #0f99d8;
 }
 
 .nav-header__btn .prev__btn {
@@ -448,17 +459,13 @@ body.lock {
 }
 
 .prev {
-  padding: 4.7rem 0rem 0rem 7.6rem;
+  padding: 20.7rem 0rem 0rem 7.6rem;
 }
 
 .prev__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.prev__logo {
-  margin: 0rem 0rem 15.8rem 0rem;
 }
 
 .prev__logo img {
@@ -741,8 +748,6 @@ body.lock {
   max-width: 62.4rem;
   font-size: 3.15rem;
   line-height: 4.15rem;
-  padding: 0rem 3rem 0rem;
-  text-align: center;
   color: rgba(213, 213, 213, 0.75);
 }
 
@@ -943,12 +948,16 @@ body.lock {
           align-items: center;
 }
 
-.map-dop__link {
-  margin: 0rem 0rem 0rem 2rem;
-}
-
 .map-dop__link img {
   max-height: 4.2rem;
+}
+
+.map-dop__link-telega {
+  margin: 0 2rem;
+}
+
+.map-dop__link-med {
+  margin: 0rem 2rem 0rem 0rem;
 }
 
 .map-dop__link-m {
@@ -1095,6 +1104,12 @@ body.lock {
 
 @media (min-width: 767.98px) {
   .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: fixed;
     top: 4rem;
     left: 50%;
@@ -1102,7 +1117,8 @@ body.lock {
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     z-index: 100;
-    width: 114.5rem;
+    width: 100vw;
+    padding: 0rem 6rem;
   }
 }
 
@@ -1165,8 +1181,12 @@ body.lock {
     text-align: left;
   }
 
+  .nav-header__btn {
+    margin: 0rem 0rem 2rem 0rem;
+  }
+
   .nav-header__btn a {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   main.lock {
@@ -1292,8 +1312,8 @@ body.lock {
   }
 
   .prev {
-    padding: 2.6rem 1.2rem 0rem;
-    height: 140.4rem;
+    padding: 10.8rem 1.2rem 0rem;
+    height: 150.4rem;
   }
 
   .prev__wrap {
@@ -1313,7 +1333,10 @@ body.lock {
   }
 
   .prev__logo {
-    margin: 0rem 0rem 3.2rem 0rem;
+    position: absolute;
+    left: 2rem;
+    top: 3rem;
+    z-index: 10;
   }
 
   .prev__title {
@@ -1377,7 +1400,7 @@ body.lock {
   }
 
   .prev__maps {
-    top: 43.5rem;
+    top: 44.5rem;
     right: auto;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -1390,7 +1413,7 @@ body.lock {
   }
 
   .prev__lines {
-    top: 38rem;
+    top: 40rem;
     right: auto;
     left: 50%;
     bottom: auto;
@@ -1417,7 +1440,7 @@ body.lock {
 
   .prev__bg img {
     width: 192rem;
-    height: 140.4rem;
+    height: 150.4rem;
   }
 
   .about {
@@ -1573,7 +1596,7 @@ body.lock {
   }
 
   .function {
-    padding: 22.6rem 8rem 0rem;
+    padding: 22.6rem 6rem 0rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1591,30 +1614,30 @@ body.lock {
   }
 
   .function__text-item img {
-    max-width: 18rem;
+    max-width: 20rem;
     left: -23rem;
   }
 
   .function__text-item:nth-child(1) {
-    max-width: 13rem;
+    max-width: 15rem;
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
 
   .function__text-item:nth-child(2) {
-    max-width: 13rem;
+    max-width: 15rem;
   }
 
   .function__text-item:nth-child(3) {
-    max-width: 13rem;
+    max-width: 15rem;
   }
 
   .function__text-item:nth-child(4) {
-    max-width: 14rem;
+    max-width: 16rem;
   }
 
   .function__text-item:nth-child(5) {
-    max-width: 13rem;
+    max-width: 15rem;
   }
 
   .function__text-item:nth-child(even) img {
@@ -1657,6 +1680,8 @@ body.lock {
 
   .token__subtitle {
     font-size: 2rem;
+    padding: 0rem 3rem 0rem;
+    text-align: center;
     line-height: 2.4rem;
   }
 
@@ -1749,11 +1774,11 @@ body.lock {
             justify-content: center;
     text-align: center;
     font-size: 1.4rem;
-    padding: 10rem 0rem 0rem 0rem;
+    padding: 6rem 0rem 0rem 0rem;
   }
 
   .map-dop__item:last-child {
-    margin: 0rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 4rem 0rem;
   }
 
   .map {
