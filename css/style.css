@@ -539,6 +539,10 @@ body.lock {
   height: 122.4rem;
 }
 
+.prev__bg-mob {
+  display: none;
+}
+
 .about {
   padding: 29.8rem 0rem 0rem 18.8rem;
 }
@@ -1340,7 +1344,7 @@ body.lock {
   }
 
   .prev__title {
-    font-size: 2.7rem;
+    font-size: 3.4rem;
     line-height: 4.05rem;
     max-width: 88rem;
     text-align: center;
@@ -1438,9 +1442,17 @@ body.lock {
     max-width: 48rem;
   }
 
-  .prev__bg img {
-    width: 192rem;
+  .prev__bg-mob {
+    display: block;
+  }
+
+  .prev__bg-mob img {
+    width: 100vw;
     height: 150.4rem;
+  }
+
+  .prev__bg {
+    display: none;
   }
 
   .about {
